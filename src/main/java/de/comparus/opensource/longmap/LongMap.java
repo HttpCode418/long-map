@@ -10,7 +10,11 @@ public interface LongMap<V> {
     boolean containsValue(V value);
 
     long[] keys();
-    V[] values();
+    Object[] values();
+
+    /* The language specification does not support generic array creation
+       (for details see https://stackoverflow.com/questions/372250/generics-arrays-and-the-classcastexception)
+    V[] values();*/
 
     long size();
     void clear();
